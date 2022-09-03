@@ -19,9 +19,10 @@
       url(../img/hero-small.jpg);
   }
 
-  @include respond(phone) {
+  @include respond(tab-port) {
     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    margin-bottom: 10rem;
   }
 
   position: relative;
