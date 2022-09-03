@@ -12,3 +12,69 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+// MEDIA QUERIES MANAGER
+/*
+0 - 600px:       Phone
+600px - 900px:   Tablet portrait
+900px - 1200px:  Tablet landscape
+1200px - 1800px: Our normal design
+1800px +:        Big desktop  
+*/
+
+// 1em = 16px
+@mixin phone-respond {
+  // 600px
+  @media only screen and (max-width: 37.5em) {
+    @content;
+  }
+}
+
+@mixin tablet-port-respond {
+  //900px
+  @media only screen and (max-width: 56.25em) {
+    @content;
+  }
+}
+
+@mixin tablet-land-respond {
+  //1200px
+  @media only screen and (max-width: 75em) {
+    @content;
+  }
+}
+
+@mixin big-desktop-respond {
+  //1800px
+  @media only screen and (min-width: 112.5em) {
+    @content;
+  }
+}
+
+/*
+$break-point argoument: 
+  phone
+  tab-port
+  tab-land
+  big-desktop
+*/
+
+@mixin respond($break-point) {
+  @if $break-point == phone {
+    @include phone-respond {
+      @content;
+    }
+  } @else if $break-point == tab-port {
+    @include tablet-port-respond {
+      @content;
+    }
+  } @else if $break-point == tab-land {
+    @include tablet-land-respond {
+      @content;
+    }
+  } @else if $break-point == big-desktop {
+    @include big-desktop-respond {
+      @content;
+    }
+  }
+}
