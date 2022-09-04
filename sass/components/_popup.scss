@@ -48,6 +48,12 @@
       width: 100%;
       @include clearfix;
     }
+    @media (max-width: 28.125rem) {
+      width: 0;
+      height: 0;
+      opacity: 0;
+      visibility: hidden;
+    }
   }
 
   &__right {
@@ -58,6 +64,9 @@
     @include respond(tab-land) {
       display: block;
       width: 100%;
+    }
+    @media (max-width: 28.125rem) {
+      height: 100%;
     }
   }
 
