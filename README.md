@@ -4,7 +4,7 @@
 
 ---
 
-<h2><a href="https://dynamic-figolla-829797.netlify.app/">Visit Natours</a></h2>
+<h2><a href="https://dynamic-figolla-829797.netlify.app/" target="_blink">Visit Natours</a></h2>
 
 ---
 
